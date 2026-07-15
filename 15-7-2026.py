@@ -81,8 +81,8 @@ numItems= int(input('Enter number of products: '))
 totalvalue=0
 f.write('Name , ID , Price , Quantity\n')
 for i in range(0,numItems):
-    f.write(f'{input('Enter product name: ')},     ')
-    f.write(f'{int(input('Enter product ID: '))},   ')
+    f.write(f"{input('Enter product name: ')},     ")
+    f.write(f"{int(input('Enter product ID: '))},   ")
     price= float(input('Enter product price: ')) 
     f.write(f'{price},    ')
     quantity=int(input('Enter product quantity: '))
@@ -90,7 +90,8 @@ for i in range(0,numItems):
     totalvalue=(price*quantity)+totalvalue
 f= open("products.csv","r")    
 print(f'{f.read()}')
-print(f'Total value : {totalvalue}') """
+print(f'Total value : {totalvalue}')
+ """
 
 #7
 """ class patient:
@@ -160,51 +161,3 @@ for movie in m_lst:
     movie.display()
     movie.is_hit()
     print('\n') """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
