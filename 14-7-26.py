@@ -212,14 +212,103 @@ for book in book_list:
         print(f'{book.display()}')
         break """
 
+#13
+""" class employee:
+    def __init__(self,id,name,dep,salary):
+        self.name=name
+        self.salary=salary
+        self.dep=dep
+        self.id=id
+    def display(self):
+        print(f'ID : {self.id}')
+        print(f'Name : {self.name}')
+        print(f'Department : {self.dep}')
+        print(f'Salary : {self.salary}\n')
+emp1=employee(201,'qwe','cse',10000)
+emp2=employee(205,'asd','ce',60000)
+emp3=employee(210,'zxc','ce',20000)
+emp4=employee(215,'poi','cse',80000)
+emp5=employee(220,'fgh','ce',50000)
+emp_lst=[emp1,emp2,emp3,emp4,emp5]
+for employee in emp_lst:
+    if employee.salary>50000:
+        employee.display()"""
 
+#14
+""" class product:
+    def __init__(self,id,name,quantity,price):
+        self.name=name
+        self.price=price
+        self.quantity=quantity
+        self.id=id
+    def display(self):
+        print(f'ID : {self.id}')
+        print(f'Name : {self.name}')
+        print(f'Quantity : {self.quantity}')
+        print(f'Price : {self.price}\n')
+    def stock_value(self):
+        value=self.quantity*self.price
+        return value
+pro1=product(201,'qwe',5,10000)
+pro2=product(205,'asd',50,60000)
+pro3=product(210,'zxc',80,20000)
+pro4=product(215,'poi',10,80000)
+pro5=product(220,'fgh',14,50000)
+pro_lst=[pro1,pro2,pro3,pro4,pro5]
+total_value=0
+for product in pro_lst:
+    total_value+=product.stock_value()
+print(f'Total stock value = {total_value}') """
 
+#15
+""" class student:
+    def __init__(self,name,roll_no,course,marks):
+        self.name=name
+        self.roll_no=roll_no
+        self.course=course
+        self.marks=marks
+    def display(self):
+        print(f'Name - {self.name}')
+        print(f'Roll No. -  {self.roll_no}')
+        print(f'Course - {self.course}')
+        print(f'Marks - {self.marks}')
+    def grade(self):
+        if self.marks>=90:
+            grad='A'
+            return grad
+        if 75<=self.marks<=89:
+            grad='B'
+            return grad
+        if 50<=self.marks<=74:
+            grad='C'
+            return grad
+        if 50>self.marks:
+            grad='Fail'
+            return grad
+std1=student('Lalit',18,'CSE',95)
+std2=student('Karan',52,'CSE',85)
+std3=student('Ram',85,'ECE',78)
+std4=student('abc',98,'CE',60)
+std5=student('Ravi',42,'CE',70)
+std6=student('Nonu',70,'CE',79)
 
-
-
-
-
-
+stdList=[std1,std2,std3,std4,std5,std6]
+for student in stdList:
+    student.display()
+    print(f"Student's Grade: {student.grade()}\n")
+highest=0
+for student in stdList:
+    if highest<student.marks:
+        highest=student.marks
+print(f'Highest marks: {highest}')
+for student in stdList:
+    if student.marks==highest:
+        student.display()
+sum=0
+for student in stdList:
+    sum+=student.marks
+average=sum/len(stdList)
+print(f'\nAverage is {average}') """
 
 
 
