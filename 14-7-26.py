@@ -309,23 +309,3 @@ for student in stdList:
     sum+=student.marks
 average=sum/len(stdList)
 print(f'\nAverage is {average}') """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
