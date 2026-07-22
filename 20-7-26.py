@@ -28,7 +28,16 @@ print(distances["Earth"])
 print(distances[:3]) """
 
 #4
-""" with ('water_log.txt',"x") as file: """
+""" water_data = [2.5, 3.0, 2.2, 3.5, 2.8, 3.1, 2.9]
+
+with open("water_log.txt", "w") as file:
+    for day_num, liters in enumerate(water_data, start=1):
+        file.write(f"Day {day_num}: {liters} L\n")
+
+# Read and display each day's intake
+with open("water_log.txt", "r") as file:
+    content = file.read()
+    print(content)"""
 
 #5
 """ import numpy as np
