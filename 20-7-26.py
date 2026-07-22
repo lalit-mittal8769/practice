@@ -199,3 +199,64 @@ print(f"Top 10 Students Marks: {sorted_marks[-10:][::-1]}")
 print(f"Bottom 10 Students Marks: {sorted_marks[:10]}") """
 
 #19
+""" import csv
+import numpy as np
+import pandas as pd
+
+with open("fuel_sales.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows([
+        ["Date", "Petrol Sold", "Diesel Sold"],
+        ["2026-07-01", 1200, 1500],
+        ["2026-07-02", 1400, 1350],
+        ["2026-07-03", 1100, 1600],
+        ["2026-07-04", 1550, 1700],
+        ["2026-07-05", 950, 1100]
+    ])
+
+df_fuel = pd.read_csv("fuel_sales.csv")
+
+petrol = df_fuel["Petrol Sold"].to_numpy()
+diesel = df_fuel["Diesel Sold"].to_numpy()
+dates = df_fuel["Date"].to_numpy()
+total_daily = petrol + diesel
+
+print(f"Total Petrol Sold: {np.sum(petrol)}")
+print(f"Total Diesel Sold: {np.sum(diesel)}")
+
+max_day_idx = np.argmax(total_daily)
+min_day_idx = np.argmin(total_daily)
+
+print(f"Highest Sales Day: {dates[max_day_idx]} ({total_daily[max_day_idx]} L)")
+print(f"Lowest Sales Day: {dates[min_day_idx]} ({total_daily[min_day_idx]} L)")
+print(f"Average Daily Sales: {np.mean(total_daily):.2f} L") """
+
+#20
+""" import numpy as np
+np.random.seed(7)
+temps = np.random.uniform(-50.0, 40.0, size=24)
+
+print(f"Max Temp: {np.max(temps):.2f}°C")
+print(f"Min Temp: {np.min(temps):.2f}°C")
+
+avg_temp = np.mean(temps)
+print(f"Average Temp: {avg_temp:.2f}°C")
+
+print(f"Temps Above Avg: {np.round(temps[temps > avg_temp], 1)}")
+print(f"Temps Below Avg: {np.round(temps[temps < avg_temp], 1)}")
+
+reshaped_temps = temps.reshape(6, 4)
+print(f"\nReshaped Array (6x4):\n{np.round(reshaped_temps, 1)}")
+
+row_avg = np.mean(reshaped_temps, axis=1)
+col_avg = np.mean(reshaped_temps, axis=0)
+
+print(f"\nRow-wise Averages (axis=1): {np.round(row_avg, 1)}")
+print(f"Col-wise Averages (axis=0): {np.round(col_avg, 1)}")
+
+flattened = reshaped_temps.flatten()
+rounded_temps = np.round(flattened, 1)
+unique_temps = np.unique(rounded_temps)
+
+print(f"\nFlattened & Rounded: {rounded_temps}")
+print(f"Unique Temp Values: {unique_temps}") """
